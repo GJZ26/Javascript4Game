@@ -1,0 +1,101 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-color: rgb(12, 12, 12);
+    color: rgb(238, 238, 238);
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+a {
+    color: rgb(148, 148, 255);
+    text-decoration: none;
+    font-weight: bold;
+}
+
+a:hover {
+    color: rgb(122, 222, 252);
+    transition: color 120ms;
+}
+
+h1 {
+    margin-bottom: 10px;
+}
+
+p {
+    width: 70%;
+    font-size: 20px;
+    margin: 10px;
+}
+
+details {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+summary {
+    width: 712px;
+    background-color: rgb(212, 212, 212);
+}
+
+summary:hover{
+    background-color: rgb(190, 190, 190);
+    cursor: pointer;
+}
+
+summary::marker {
+    color: rgb(16, 135, 172);
+}
+
+code {
+    font-weight: bold;
+}
+
+li {
+    list-style: none;
+}
+
+summary>a {
+    color: rgb(12, 70, 124);
+}
+
+summary>a:hover {
+    color: rgb(19, 129, 202)
+}
+
+.detail {
+    font-size: 14px;
+    width: 700px;
+    margin: 0;
+    background-color: rgb(197, 197, 197);
+    padding: 6px;
+    color: rgb(12, 16, 34);
+}
+
+details[open] summary~* {
+    animation: sweep .5s ease-in-out;
+}
+
+@keyframes sweep {
+    0% {
+        opacity: 0;
+        margin-left: -10px
+    }
+
+    100% {
+        opacity: 1;
+        margin-left: 0px
+    }
+}
